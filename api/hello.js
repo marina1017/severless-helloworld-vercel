@@ -1,8 +1,8 @@
-import { parseTweet } from 'twitter-text';
+const twitterText = require('twitter-text');
 
-export default (req, res) => {
-  const text = req.query
-  const result = parseTweet(text);
+module.exports = (req, res) => {
+  const { text = 'World' } = req.query
+  const result = twitterText.parseTweet(text);
   res.json({
     result: result,
   })
