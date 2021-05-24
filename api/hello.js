@@ -1,4 +1,4 @@
-const twitterText = require('twitter-text');
+import twitterText from 'twitter-text';
 
 module.exports = (req, res) => {
   const { text = 'World' } = req.query
