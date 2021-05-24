@@ -6,4 +6,5 @@ module.exports = (req, res) => {
   res.json({
     result: result,
   })
+  res.send(`Hello ${text}!`)
 }
