@@ -1,4 +1,9 @@
-module.exports = (req, res) => {
-  const { name = 'World' } = req.query
-  res.status(200).send(`Hello ${name}!`)
+import { parseTweet } from 'twitter-text';
+
+export default (req, res) => {
+  const text = req.query
+  const result = parseTweet(text);
+  res.json({
+    result: result,
+  })
 }
